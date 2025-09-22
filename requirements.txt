@@ -8,7 +8,10 @@ Werkzeug==2.3.7
 python-docx==0.8.11
 
 # 数据处理和XML处理
-lxml==4.9.3
+# 如果lxml==5.1.0编译失败，可以尝试以下备用版本：
+# lxml==4.9.4 (更稳定的版本)
+# 或者使用预编译二进制版本: --only-binary=lxml
+lxml==5.1.0
 
 # WSGI服务器 (生产环境)
 gunicorn==21.2.0

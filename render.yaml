@@ -3,7 +3,10 @@ services:
     name: survey-converter
     env: python
     plan: free
-    buildCommand: pip install -r requirements.txt
+    buildCommand: |
+      apt-get update && apt-get install -y libxml2-dev libxslt1-dev zlib1g-dev
+      pip install --upgrade pip
+      pip install -r requirements.txt
     startCommand: gunicorn --bind 0.0.0.0:$PORT web_app:app
     envVars:
       - key: PYTHON_VERSION
