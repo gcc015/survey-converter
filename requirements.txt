@@ -32,4 +32,4 @@ pathlib2==2.3.7
 chardet==5.2.0
 
 # 临时文件处理
-tempfile2==0.1.0
+tempfile2==0.1.2
